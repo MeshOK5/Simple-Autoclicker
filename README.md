@@ -1,3 +1,3 @@
 Simple Autoclicker on c++
 
-P.S. Autoclicker.exe in Autoclicker folder
+P.S. autoclicker.exe in Autoclicker folder
