@@ -1,9 +1,8 @@
 #include <windows.h>
 #pragma once
 
-class Clicks
+namespace Clicks
 {
-public:
     bool click = false;
     char type_click = 'L';
 
@@ -18,4 +17,4 @@ public:
         mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
         mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
     }
-};
+}
