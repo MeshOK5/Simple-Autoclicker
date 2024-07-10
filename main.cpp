@@ -3,8 +3,7 @@
 #include "Clicks.h"
 
 using namespace std;
-
-Clicks click;
+using namespace Clicks;
 
 int main(){
     cout << "Welcome to Autoclicker\nPress L-left click\nPress R-right\nPress X - Disable Autoclicker" << endl;
@@ -12,14 +11,14 @@ int main(){
     while(true){
         if(GetAsyncKeyState('L'))
         {
-            click.click ^= 1;
-            click.type_click = 'L';
+            click ^= 1;
+            type_click = 'L';
             Sleep(100);
         }
         else if(GetAsyncKeyState('R'))
         {
-            click.click ^= 1;
-            click.type_click = 'R';
+            click ^= 1;
+            type_click = 'R';
             Sleep(100);
         }
         else if(GetAsyncKeyState('X'))
@@ -27,15 +26,15 @@ int main(){
             break;
         }
         
-        if(click.click)
+        if(click)
         {
-            switch(click.type_click)
+            switch(type_click)
             {
                 case 'L':
-                    click.Left_Click();
+                    Left_Click();
                     break;
                 case 'R':
-                    click.Right_Click();
+                    Right_Click();
                     break;
                 default:
                     break;
