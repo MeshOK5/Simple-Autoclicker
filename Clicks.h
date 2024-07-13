@@ -22,7 +22,6 @@ namespace Clicks
 
     void Question()
     {
-        type_click = 'N';
         button = 'X';
 
         while(button == 'X')
