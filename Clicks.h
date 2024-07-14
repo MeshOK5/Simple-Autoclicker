@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <conio.h>
 #include <windows.h>
 
@@ -25,7 +26,7 @@ namespace Clicks
     {
         button = 'X';
 
-        while(button == 'X')
+        while(button == 'X' || button > 127)
         {
             cout << "Key to on/off autocliker is" << endl;
             button = toupper(getch());
