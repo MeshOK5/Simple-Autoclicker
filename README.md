@@ -1,6 +1,6 @@
 About:
 
-Simple Autoclicker on c++ + SFML
+Simple Autoclicker on c++ + SFML library
 
 Control:
 
