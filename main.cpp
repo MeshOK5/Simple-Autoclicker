@@ -60,7 +60,7 @@ int main()
     button2.button_shape.setOutlineColor(color_for_button_text);
 
     Button SpeedQuest;
-    String tex3 = "Speed is on";
+    String tex3 = "Delay is on";
     SpeedQuest.create(80, 80, 10, 250, tex3);
     SpeedQuest.button_text.setCharacterSize(12);
     SpeedQuest.button_text.setFont(font);
@@ -69,7 +69,7 @@ int main()
 
     Text speed;
     speed.setFont(font);
-    speed.setString("Speed:");
+    speed.setString("Delay:");
     speed.setCharacterSize(30);
     speed.setStyle(Text::Bold);
     speed.setPosition(150, 230);
@@ -171,12 +171,12 @@ int main()
         if(with_time)
         {
             SpeedQuest.button_text.setFillColor(on);
-            SpeedQuest.button_text.setString("Speed is on");
+            SpeedQuest.button_text.setString("Delay is on");
         }
         else
         {
             SpeedQuest.button_text.setFillColor(off);
-            SpeedQuest.button_text.setString("Speed is off");
+            SpeedQuest.button_text.setString("Delay is off");
         }
 
         if(click)
