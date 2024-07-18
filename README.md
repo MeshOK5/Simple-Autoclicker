@@ -11,5 +11,3 @@ Click on the second button and click LMB or RMB to make type of autoclick
 Also you can change autoclicker delay with slider or click on third button to no-delay mod
 
 P.S. autoclicker.exe in Autoclicker folder
-
-Video about it: https://www.youtube.com/watch?v=OhwlTrKz6EU
