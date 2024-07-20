@@ -1,3 +1,0 @@
-D:/AutoClicker/build/CMakeFiles/autoclicker.dir
-D:/AutoClicker/build/CMakeFiles/edit_cache.dir
-D:/AutoClicker/build/CMakeFiles/rebuild_cache.dir
