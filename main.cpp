@@ -96,12 +96,37 @@ int main()
 
     while (window.isOpen())
     {
+        Vector2i mouse_pos = Mouse::getPosition(window);
+
         Event event;
         while (window.pollEvent(event))
         {
             if (event.type == Event::Closed)
             {
                 window.close();
+            }
+
+            if(button1.button_shape.getGlobalBounds().contains(mouse_pos.x, mouse_pos.y))
+            {
+                if(Mouse::isButtonPressed(Mouse::Left))
+                {
+                    button1.button_text.setString(" ");
+                    pressed = true;
+                }
+            }
+
+            if(button2.button_shape.getGlobalBounds().contains(mouse_pos.x, mouse_pos.y))
+            {
+                if(Mouse::isButtonPressed(Mouse::Left))
+                {
+                    button2.button_text.setString("LMB");
+                    type_click = 'L';
+                }
+                else if(Mouse::isButtonPressed(Mouse::Right))
+                {
+                    button2.button_text.setString("RMB");
+                    type_click = 'R';
+                }
             }
             
             if(event.type == Event::KeyPressed)
@@ -122,30 +147,6 @@ int main()
         
         HWND hWnd = GetConsoleWindow();
         ShowWindow(hWnd, SW_HIDE);
-
-        Vector2i mouse_pos = Mouse::getPosition(window);
-        if(button1.button_shape.getGlobalBounds().contains(mouse_pos.x, mouse_pos.y))
-        {
-            if(Mouse::isButtonPressed(Mouse::Left))
-            {
-                button1.button_text.setString(" ");
-                pressed = true;
-            }
-        }
-
-        if(button2.button_shape.getGlobalBounds().contains(mouse_pos.x, mouse_pos.y))
-        {
-            if(Mouse::isButtonPressed(Mouse::Left))
-            {
-                button2.button_text.setString("LMB");
-                type_click = 'L';
-            }
-            else if(Mouse::isButtonPressed(Mouse::Right))
-            {
-                button2.button_text.setString("RMB");
-                type_click = 'R';
-            }
-        }
 
         if(SpeedQuest.button_shape.getGlobalBounds().contains(mouse_pos.x, mouse_pos.y))
         {
